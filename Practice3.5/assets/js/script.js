@@ -62,5 +62,36 @@ const Slider = {
         document.getElementById("slide-" + this.current).setAttribute("class", "singleSlide slideOutLeft");
 
         this.current = next;
+    },
+
+    hide: function () {
+        document.getElementById("slider").style.display = "none";
+    },
+
+    show: function () {
+        document.getElementById("slider").style.display = "block";
+    },
+
+    play: function () {
+        toggle.addEventListener('click', (event)=>{
+            if (event.target.classList.contains('start')){
+                event.target.innerHTML = 'Stop';
+                clearInterval(interval)
+            } else {
+                event.target.innerHTML = 'Start';
+                interval = setInterval(()=>{
+                    Slider.nextSlide();
+                },1000)
+            }
+            event.target.classList.toggle('start')
+        })
+    },
+
+    click: function () {
+        if(document.getElementById("toggle").innerText === "Start") {
+            document.getElementById("toggle").innerText = "Stop"
+        } else {
+            document.getElementById("toggle").innerText = "Start";
+        }
     }
 }

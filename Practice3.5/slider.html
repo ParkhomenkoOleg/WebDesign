@@ -3,26 +3,32 @@
 <head>
     <script src="assets/js/script.js"></script>
     <script>
-        window.onload = function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // ви можете зробити скільки завгодно слайдів
             let slides = [
                 {
-                    title: "Google",
-                    background: "https://via.placeholder.com/500x150",
-                    link: "http://google.com"
+                    title: "Photos",
+                    background: "assets/img/derevo_noch_zvezdy_141228_1920x1080.jpg",
+                    link: "https://klike.net/1709-skachat-kartinki-na-telefon-besplatno-52-foto.html"
                 }, {
-                    title: "Yahoo",
-                    background: "https://via.placeholder.com/500x150",
-                    link: "http://yahoo.com"
+                    title: "Photos",
+                    background: "assets/img/1-711.jpg",
+                    link: "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"
+                },  {
+                    title: "",
+                    background: "assets/img/Kartinki_jpg_1_20122126.jpg",
+                    link: "https://www.ejin.ru/foto-kartinki/oboi-dlya-rabochego-stola-kartinki-na-lyuboy-vkus.html"
                 }
             ]
             Slider.initSlider(slides);
-        };
+        });
+
     </script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <title>SLIDER</title>
    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <header class="header"><img src="assets/img/apple_logo_89036.jpg" height="60px"></header>
@@ -30,8 +36,12 @@
    <main class="center column">
        <article>
            <h1>SLIDER</h1>
-           <p><div id="slider"></div>
-           </p>
+           <div id="slider"></div>
+           <button class="button" onclick="Slider.prevSlide()">Prev</button>
+           <button class="button" onclick="Slider.nextSlide()">Next</button>
+           <button class="button" onclick="Slider.hide()">Hide</button>
+           <button class="button" onclick="Slider.show()">Show</button>
+           <button id="toggle" class="button" onclick="Slider.click(); Slider.play()">Start</button>
        </article>
    </main>
    <nav class="left column">

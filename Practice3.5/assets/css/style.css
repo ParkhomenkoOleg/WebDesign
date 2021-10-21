@@ -68,3 +68,12 @@ a.link {
     -webkit-animation: slideOutRight 1s forwards;
     animation: slideOutRight 1s forwards;
 }
+
+.button {
+    background: #5B9AFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 5px 15px;
+    border: none;
+}
